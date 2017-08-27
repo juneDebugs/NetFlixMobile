@@ -25,15 +25,20 @@ namespace NetFlixMobile.Views
             }
         }
 
-
         public MoviesPage()
         {
+            BindingContext = this;
+
             InitializeComponent();
         }
 
-        void OnTextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
+        async void OnTextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
-            throw new ();fgf
+            if
+                (e.NewTextValue == null || e.NewTextValue.Length < MovieService.MinSearchLength)
+                return;
+
+            await FindMovies(actor: e.NewTextValue);
         }
     }
 }
