@@ -48,6 +48,7 @@
       <DependentUpon>MovieDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\MovieService.cs" />
+    <Compile Include="Models\Movie.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
