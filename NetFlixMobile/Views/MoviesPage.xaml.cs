@@ -65,5 +65,16 @@ namespace NetFlixMobile.Views
             }
 
         }
+
+        async void OnMoviesSelected (object sender, SelectedItemChangedEventArgs e)
+        {
+            if
+                (e.SelectedItem == null)
+                return;
+
+            var movie = e.SelectedItem as Movie;
+            moviesListView.SelectedItem = null;
+            await Navigation.PushAsync(new MovieDetailsPage(movie));
+        }
     }
 }
