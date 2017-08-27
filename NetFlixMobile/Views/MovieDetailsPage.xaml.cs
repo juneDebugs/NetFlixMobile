@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using NetFlixMobile.Models;
+using NetFlixMobile.Services;
 using Xamarin.Forms;
 
 namespace NetFlixMobile.Views
@@ -10,7 +11,7 @@ namespace NetFlixMobile.Views
         private MovieService _movieService = new MovieService();
         private Movie _movie;
 
-        public MovieDetailsPage()
+        public MovieDetailsPage(Movie movie)
         {
             if
                 (movie == null)

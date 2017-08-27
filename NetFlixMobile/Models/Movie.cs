@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Dynamic;
+using Newtonsoft.Json;
+
 namespace NetFlixMobile.Models
 {
     public class Movie

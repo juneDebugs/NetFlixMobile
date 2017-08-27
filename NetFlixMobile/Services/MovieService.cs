@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Net;
 using Newtonsoft.Json;
+using NetFlixMobile.Models;
 
 namespace NetFlixMobile.Services
 {

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using NetFlixMobile.Services;
+using System.Linq;
+using NetFlixMobile.Models;
 
 namespace NetFlixMobile.Views
 {

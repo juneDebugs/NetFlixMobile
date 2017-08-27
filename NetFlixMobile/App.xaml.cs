@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using NetFlixMobile.Views;
 
 namespace NetFlixMobile
 {
@@ -8,7 +9,7 @@ namespace NetFlixMobile
         {
             InitializeComponent();
 
-            MainPage = new NetFlixMobilePage();
+            MainPage = new NavigationPage(new MoviesPage());
         }
 
         protected override void OnStart()
