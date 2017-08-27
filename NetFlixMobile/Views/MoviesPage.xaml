@@ -4,37 +4,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="NetFlixMobile.Views.MoviesPage">
 
-    <StackLayout>
-        <SearchBar
-            TextChanged= "OnTextChanged"
-            Placeholder= "Search by actor or actress..." />
-        <ActivityIndicator
-            IsRunning= "{Binding IsSearching}" />
-        <Frame
-            x:Name= "notFound"
-            Padding= "20"
-            HasShadow= "false"
-            IsVisible= "false" >
-
-            <Label
-                Text= "No movies found matching your search. Sorry! :("
-                TextColor= "Aqua" />
+<StackLayout>
+        <SearchBar 
+            TextChanged="OnTextChanged" 
+            Placeholder="Search by actor..."/>
+        <ActivityIndicator 
+            IsRunning="{Binding IsSearching}" />
+        <Frame 
+            x:Name="notFound" 
+            Padding="20" 
+            HasShadow="false" 
+            IsVisible="false">
+            <Label 
+                Text="No movies found matching your search." 
+                TextColor="Gray" />
         </Frame>
 
-        <ListView
-            x:Name= "moviesListView"
-            ItemSelected= "OnMovieSelected"
-            IsVisible= "false" >
-
+        <ListView 
+            x:Name="moviesListView" 
+            ItemSelected="OnMovieSelected" 
+            IsVisible="false" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell
-                        ImageSource= "{Binding Poster}"
-                        Text= "{Binding Title}"
-                        Detail= "{Binding ReleaseYear}" />
+                    
+                    <ImageCell 
+                        ImageSource="{Binding Poster}"
+                        Text="{Binding Title}" Detail="{Binding ReleaseYear}" />
+                    
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
+        
     </StackLayout>
 </ContentPage>
