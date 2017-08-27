@@ -31,7 +31,7 @@
                     <ImageCell
                         ImageSource= "{Binding Poster}"
                         Text= "{Binding Title}"
-                        Detail= "{Binding ReleaseYear" />
+                        Detail= "{Binding ReleaseYear}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
 
