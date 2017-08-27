@@ -11,5 +11,10 @@ namespace NetFlixMobile.Views
         {
             InitializeComponent();
         }
+
+        void Handle_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
+        {
+            throw new ();
+        }
     }
 }
