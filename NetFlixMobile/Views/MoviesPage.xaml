@@ -21,9 +21,20 @@
                 TextColor= "Aqua" />
         </Frame>
 
+        <ListView
+            x:Name= "moviesListView"
+            ItemSelected= "OnMovieSelected"
+            IsVisible= "false" >
 
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                        ImageSource= "{Binding Poster}"
+                        Text= "{Binding Title}"
+                        Detail= "{Binding ReleaseYear" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
 
-
+        </ListView>
     </StackLayout>
-
 </ContentPage>
