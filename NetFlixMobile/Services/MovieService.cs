@@ -29,6 +29,15 @@ namespace NetFlixMobile.Services
             return JsonConvert.DeserializeObject<List<Movie>>(content);
         }
 
+        public async Task<Movie> GetMovie(string title)
+        {
+            var response = await _client.GetAsync($"{Url}?title={title}");
 
+            if (response.StatusCode == HttpStatusCode.NotFound)
+                return null;
+
+            var content = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<Movie>(content);
+        }
     }
 }
