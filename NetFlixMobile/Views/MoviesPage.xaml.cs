@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace NetFlixMobile.Views
 {
@@ -39,6 +40,30 @@ namespace NetFlixMobile.Views
                 return;
 
             await FindMovies(actor: e.NewTextValue);
+        }
+
+        async Task FindMovies (string actor)
+        {
+            try
+            {
+                IsSearching = true;
+
+                var movies = await _service.FindMoviesByActor(actor);
+                moviesListView.ItemsSource = movies;
+                moviesListView.IsVisible = movies.Any();
+                notFound.IsVisible = !moviesListView.IsVisible;
+            }
+
+            catch (Exception)
+            {
+                await DisplayAlert("Error", "Could not retrive the list of movies.", "OK");
+            }
+
+            finally
+            {
+                IsSearching = false;
+            }
+
         }
     }
 }
