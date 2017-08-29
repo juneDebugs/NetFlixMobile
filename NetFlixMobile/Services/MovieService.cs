@@ -13,7 +13,7 @@ namespace NetFlixMobile.Services
 	{
 		public static readonly int MinSearchLength = 5;
 
-		private const string Url = "http://netflixroulette.net/api/api.php";
+        private const string Url = "http://netflixroulette.net/api/api.php?title={0}";
 		private HttpClient _client = new HttpClient();
 
 		public async Task<IEnumerable<Movie>> FindMoviesByActor(string actor)
