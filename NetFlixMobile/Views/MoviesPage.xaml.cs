@@ -14,10 +14,13 @@ namespace NetFlixMobile.Views
          
 		private BindableProperty IsSearchingProperty =
 			BindableProperty.Create("IsSearching", typeof(bool), typeof(MoviesPage), false);
-		public bool IsSearching
+		
+        public bool IsSearching
 		{
-			get { return (bool)GetValue(IsSearchingProperty); }
-			set { SetValue(IsSearchingProperty, value); }
+			get 
+                { return (bool)GetValue(IsSearchingProperty); }
+			set 
+                { SetValue(IsSearchingProperty, value); }
 		}
 
 		public MoviesPage()
