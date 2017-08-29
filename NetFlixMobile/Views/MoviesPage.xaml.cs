@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using NetFlixMobile.Services;
 using System.Linq;
 using NetFlixMobile.Models;
+using System.Net.Http;
+using System.Diagnostics;
 
 namespace NetFlixMobile.Views
 {
@@ -51,8 +53,9 @@ namespace NetFlixMobile.Views
 				moviesListView.IsVisible = movies.Any();
 				notFound.IsVisible = !moviesListView.IsVisible;
 			}
-			catch (Exception)
+			catch (Exception e)
 			{
+                Debug.WriteLine(e.Message);
 				await DisplayAlert("Error", "Could not retrieve the list of movies.", "OK");
 			}
 			finally
