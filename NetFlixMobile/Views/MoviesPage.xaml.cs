@@ -15,7 +15,7 @@ namespace NetFlixMobile.Views
 		private MovieService _service = new MovieService();
          
 		private BindableProperty IsSearchingProperty =
-			BindableProperty.Create("IsSearching", typeof(bool), typeof(MoviesPage), false);
+			    BindableProperty.Create("IsSearching", typeof(bool), typeof(MoviesPage), false);
 		
         public bool IsSearching
 		{
